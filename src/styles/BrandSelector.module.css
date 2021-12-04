@@ -1,0 +1,14 @@
+.brandSelector {
+    display: inline-block;
+}
+.input {
+    border-radius: 15px;
+    border: 2px #d9d9d9 solid;
+    padding: 7px;
+    margin: 5px 8px 5px 0;
+    width: 185px;
+}
+
+.brandSelector input:focus {
+    outline: 0;
+}

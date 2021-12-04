@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from '../styles/Cars.module.css'
 
 const Cars = ({cars, loading, show}) => {
 
@@ -8,7 +9,7 @@ const Cars = ({cars, loading, show}) => {
 
     if (show) {
         return (
-            <div className='cars-list'>
+            <div className={styles.carsList}>
                 <ul>
                     {cars.map((car) => {
                         const {Model_ID, Make_Name, Model_Name} = car

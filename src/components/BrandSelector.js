@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/BrandSelector.module.css';
 
 const BrandSelector = ({setUrl}) => {
     const url = 'https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/';
@@ -8,8 +9,9 @@ const BrandSelector = ({setUrl}) => {
     }
 
     return (
-        <div className='brand-selector'>
-            <input id='brand' type='text' placeholder="Brand" onChange={(e) => setBrandUrl(e.target.value)}
+        <div className={styles.brandSelector}>
+            <input id='brand' className={styles.input} type='text' placeholder="Brand"
+                   onChange={(e) => setBrandUrl(e.target.value)}
                    aria-label={'brandInput'}/>
         </div>
     )

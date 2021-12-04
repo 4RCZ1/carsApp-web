@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import styles from '../styles/Pagination.module.css';
 
 const Pagination = ({perPage, totalCars, paginate, show, currentPage}) => {
     const pageNumbers = [];
@@ -11,9 +12,9 @@ const Pagination = ({perPage, totalCars, paginate, show, currentPage}) => {
 
     const isActive = (number) => {
         if (number === currentPage) {
-            return 'pagination-number-active';
+            return styles.paginationNumberActive;
         }
-        return 'pagination-number';
+        return styles.paginationNumber;
     }
 
     const forwardJump = () => {
@@ -58,17 +59,17 @@ const Pagination = ({perPage, totalCars, paginate, show, currentPage}) => {
     if (show) {
         return (
             <nav>
-                <ul className='pagination'>
-                    <li className='pagination-number' onClick={() => paginate(currentPage - 1)}>
-                        <p className='arrow-left'/>
+                <ul className={styles.pagination}>
+                    <li className={styles.paginationNumber} onClick={() => paginate(currentPage - 1)}>
+                        <p className={styles.arrowLeft}/>
                     </li>
                     {visibleNumbers.map(number => (
                         <li onClick={() => paginate(number)} key={number} className={isActive(number)}>
                             <p>{number}</p>
                         </li>
                     ))}
-                    <li className='pagination-number' onClick={() => paginate(currentPage + 1)}>
-                        <p className='arrow-right'/>
+                    <li className={styles.paginationNumber} onClick={() => paginate(currentPage + 1)}>
+                        <p className={styles.arrowRight}/>
                     </li>
                 </ul>
             </nav>

@@ -1,0 +1,27 @@
+.carsList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carsList li {
+    padding: 10px 0 10px 30px;
+    margin: 10px 0;
+    width: 370px;
+    height: 60px;
+    background: white;
+    box-shadow: 0 2px 2px 0 rgba(0 0 0 / 5%), 0 1px 5px 0 rgb(0 0 0 / 7%);
+    border-radius: 5px;
+    transition: all 200ms ease;
+}
+
+.carsList li:hover {
+    box-shadow: 0 2px 2px 0 rgba(0 0 0 / 15%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+}
+
+.carsList p {
+    margin: 4px 0;
+}
+
+.carsList h3 {
+    margin: 6px 0;
+}

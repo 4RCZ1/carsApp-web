@@ -1,0 +1,77 @@
+.pagination {
+    list-style-type: none;
+    padding: 0;
+}
+
+.paginationNumber {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    background: #f1f1f1;
+    transition: all 200ms ease;
+    border-radius: 16px;
+    margin: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0 0 0 / 10%), 0 1px 5px 0 rgb(0 0 0 / 15%);
+}
+
+.paginationNumber:hover {
+    background: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 30%);
+}
+
+.paginationNumber p {
+    display: inline-block;
+    padding: 0;
+    margin: 7px 0 0;
+}
+
+.paginationNumberActive p {
+    display: inline-block;
+    padding: 0;
+    margin: 7px 0 0;
+}
+
+.paginationNumberActive {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    background: #9a9aa1;
+    transition: all 200ms ease;
+    border-radius: 16px;
+    margin: 2px;
+}
+
+.arrowLeft:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #2d86e7;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(135deg);
+}
+
+.arrowRight:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #2d86e7;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(-45deg);
+}
+
+.selectPages p {
+    margin: 2px;
+    display: inline-block;
+}
+
+.selectPages {
+    margin: 5px 0;
+}
