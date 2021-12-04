@@ -21,7 +21,6 @@ const GetData = () => {
         setLoading(false);
         setShowingCars(true);
     }
-
     const indexOfLastCar = currentPage * perPage;
     const indexOfFirstCar = indexOfLastCar-perPage;
     const currentCars = cars.slice(indexOfFirstCar, indexOfLastCar);

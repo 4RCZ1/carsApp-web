@@ -1,7 +1,7 @@
 import {getByLabelText,fireEvent, render, screen} from '@testing-library/react';
-import BrandSelector from './BrandSelector';
+import BrandSelector from './components/BrandSelector';
 
-test('renders learn react link', () => {
+test('Check if brand selector works correctly', () => {
     let return_val;
     render(<BrandSelector setUrl={(url)=>return_val=url}/>);
     const input = screen.getByLabelText('brandInput');

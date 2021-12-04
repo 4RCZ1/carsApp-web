@@ -1,5 +1,5 @@
 import {render, screen, waitFor} from '@testing-library/react';
-import Cars from './Cars';
+import Cars from './components/Cars';
 import cars from './jsons/cars.json';
 
 test('renders welcoming message correctly', () => {
