@@ -1,6 +1,5 @@
-import {render, screen, waitFor} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import Cars from './components/Cars';
-import cars from './jsons/cars.json';
 
 test('renders welcoming message correctly', () => {
     render(<Cars/>);
@@ -13,7 +12,8 @@ test('renders loading message correctly', async () => {
     expect(linkElement).toBeInTheDocument();
 });
 test('renders cars correctly', async () => {
-    render(<Cars cars={[{"Make_ID":471,"Make_Name":"OPEL","Model_ID":1840,"Model_Name":"Ampera"}]} loading={false} show={true}/>);
+    render(<Cars cars={[{"Make_ID": 471, "Make_Name": "OPEL", "Model_ID": 1840, "Model_Name": "Ampera"}]}
+                 loading={false} show={true}/>);
     const linkElement = screen.getByText(/Model/i);
     expect(linkElement).toBeInTheDocument();
 });

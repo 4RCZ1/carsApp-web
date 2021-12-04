@@ -1,30 +1,30 @@
 import React, {useState} from 'react';
 
-const Pagination = ({ perPage, totalCars, paginate, show, currentPage}) => {
+const Pagination = ({perPage, totalCars, paginate, show, currentPage}) => {
     const pageNumbers = [];
     let visibleNumbers = [];
     const [neighbours] = useState(3);
 
-    for(let i = 1; i <=Math.ceil(totalCars/perPage); i++){
+    for (let i = 1; i <= Math.ceil(totalCars / perPage); i++) {
         pageNumbers.push(i);
     }
 
     const isActive = (number) => {
-        if(number===currentPage){
+        if (number === currentPage) {
             return 'pagination-number-active';
         }
         return 'pagination-number';
     }
 
     const forwardJump = () => {
-        visibleNumbers.push(pageNumbers[pageNumbers.length-1]-(pageNumbers[pageNumbers.length-1]-visibleNumbers[neighbours+1])/2|0);
+        visibleNumbers.push(pageNumbers[pageNumbers.length - 1] - (pageNumbers[pageNumbers.length - 1] - visibleNumbers[neighbours + 1]) / 2 | 0);
     };
     const backwardJump = () => {
-        visibleNumbers.push((pageNumbers[currentPage-(neighbours/2|0)]-pageNumbers[0])/2|0);
+        visibleNumbers.push((pageNumbers[currentPage - (neighbours / 2 | 0)] - pageNumbers[0]) / 2 | 0);
     };
 
     const defineVisibleNumbers = () => {
-        if(pageNumbers.length>neighbours+4) {
+        if (pageNumbers.length > neighbours + 4) {
             visibleNumbers.push(pageNumbers[0]);
             if (currentPage < neighbours + 2) {
                 for (let i = 1; i <= neighbours + 1; i++) {
@@ -48,18 +48,18 @@ const Pagination = ({ perPage, totalCars, paginate, show, currentPage}) => {
                 forwardJump();
             }
             visibleNumbers.push(pageNumbers[pageNumbers.length - 1]);
-        }else{
-            visibleNumbers=pageNumbers;
+        } else {
+            visibleNumbers = pageNumbers;
         }
     }
 
     defineVisibleNumbers();
 
-    if(show) {
+    if (show) {
         return (
             <nav>
                 <ul className='pagination'>
-                    <li className='pagination-number' onClick={()=>paginate(currentPage-1)}>
+                    <li className='pagination-number' onClick={() => paginate(currentPage - 1)}>
                         <p className='arrow-left'/>
                     </li>
                     {visibleNumbers.map(number => (
@@ -67,7 +67,7 @@ const Pagination = ({ perPage, totalCars, paginate, show, currentPage}) => {
                             <p>{number}</p>
                         </li>
                     ))}
-                    <li className='pagination-number' onClick={()=>paginate(currentPage+1)}>
+                    <li className='pagination-number' onClick={() => paginate(currentPage + 1)}>
                         <p className='arrow-right'/>
                     </li>
                 </ul>
@@ -75,7 +75,7 @@ const Pagination = ({ perPage, totalCars, paginate, show, currentPage}) => {
         )
     }
 
-    return<nav/>
+    return <nav/>
 }
 
 export default Pagination;

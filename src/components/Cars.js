@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Cars = ({cars,loading,show}) => {
+const Cars = ({cars, loading, show}) => {
 
-    if(loading){
+    if (loading) {
         return <h2>Loading ...</h2>
     }
 
-    if(show) {
+    if (show) {
         return (
             <div className='cars-list'>
                 <ul>
@@ -27,7 +27,8 @@ const Cars = ({cars,loading,show}) => {
 
     return <div>
         <p>
-            Enter the brand of your choice in the 'brand' field and click the 'show cars' button to see the cars of the selected brand. Default brand is Honda
+            Enter the brand of your choice in the 'brand' field and click the 'show cars' button to see the cars of the
+            selected brand. Default brand is Honda
         </p>
     </div>
 }
